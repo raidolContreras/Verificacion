@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="unimoVerInfoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="alumnosFromGES">
+          <Key>
+            <PropertyRef Name="NUMEROALUMNO" />
+          </Key>
+          <Property Name="NUMEROALUMNO" Type="float" Nullable="false" />
+          <Property Name="PATERNO" Type="nvarchar" MaxLength="255" />
+          <Property Name="MATERNO" Type="nvarchar" MaxLength="255" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="255" />
+          <Property Name="NIVEL" Type="nvarchar" MaxLength="255" />
+          <Property Name="GRADO" Type="float" />
+          <Property Name="MATRICULA" Type="float" />
+          <Property Name="CLAVE_CIUDADANA" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_CIVIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" />
+          <Property Name="DOMICILIO" Type="nvarchar" MaxLength="255" />
+          <Property Name="CP" Type="varchar" MaxLength="50" />
+          <Property Name="CIUDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO" Type="nvarchar" MaxLength="255" />
+          <Property Name="TELEFONO" Type="varchar" MaxLength="50" />
+          <Property Name="CELULAR" Type="varchar" MaxLength="50" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="LUGAR_NACIMIENTO" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_NACIMIENTO" Type="nvarchar" MaxLength="255" />
+          <Property Name="NACIONALIDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESCUELA_PROCEDENCIA" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_ESCOLARIDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="FECHA_INGRESO" Type="datetime" />
+          <Property Name="GENERO" Type="nvarchar" MaxLength="255" />
+          <Property Name="PLANTEL" Type="int" />
+          <Property Name="CODIGOGRUPO" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BitacoraVI">
+          <Key>
+            <PropertyRef Name="IdBitacora" />
+          </Key>
+          <Property Name="IdBitacora" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MATRICULA" Type="float" />
+          <Property Name="NUMEROALUMNO" Type="float" />
+          <Property Name="MOVIMIENTO" Type="varchar(max)" />
+          <Property Name="FECHA" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dataVer1">
+          <Key>
+            <PropertyRef Name="NUMEROALUMNO" />
+          </Key>
+          <Property Name="NUMEROALUMNO" Type="float" Nullable="false" />
+          <Property Name="PATERNO" Type="nvarchar" MaxLength="255" />
+          <Property Name="MATERNO" Type="nvarchar" MaxLength="255" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="255" />
+          <Property Name="NIVEL" Type="nvarchar" MaxLength="255" />
+          <Property Name="GRADO" Type="float" />
+          <Property Name="MATRICULA" Type="float" />
+          <Property Name="CLAVE_CIUDADANA" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_CIVIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" />
+          <Property Name="CALLE" Type="varchar" MaxLength="1000" />
+          <Property Name="NUMINT" Type="varchar" MaxLength="50" />
+          <Property Name="NUMEXT" Type="varchar" MaxLength="50" />
+          <Property Name="COLONIA" Type="varchar" MaxLength="500" />
+          <Property Name="CP" Type="varchar" MaxLength="50" />
+          <Property Name="CIUDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO" Type="nvarchar" MaxLength="255" />
+          <Property Name="PAIS" Type="int" />
+          <Property Name="TELEFONO" Type="varchar" MaxLength="50" />
+          <Property Name="CELULAR" Type="varchar" MaxLength="50" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="LUGAR_NACIMIENTO" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_NACIMIENTO" Type="nvarchar" MaxLength="255" />
+          <Property Name="NACIONALIDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESCUELA_PROCEDENCIA" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_ESCOLARIDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="FECHA_INGRESO" Type="datetime" />
+          <Property Name="GENERO" Type="varchar" MaxLength="50" />
+          <Property Name="PLANTEL" Type="int" />
+          <Property Name="CODIGOGRUPO" Type="varchar" MaxLength="50" />
+          <Property Name="CICLO" Type="varchar" MaxLength="50" />
+          <Property Name="FECHAREVISION" Type="datetime" />
+        </EntityType>
+        <EntityType Name="dataVer2">
+          <Key>
+            <PropertyRef Name="NUMEROALUMNO" />
+          </Key>
+          <Property Name="NUMEROALUMNO" Type="float" Nullable="false" />
+          <Property Name="PATERNO" Type="nvarchar" MaxLength="255" />
+          <Property Name="MATERNO" Type="nvarchar" MaxLength="255" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="255" />
+          <Property Name="NIVEL" Type="nvarchar" MaxLength="255" />
+          <Property Name="GRADO" Type="float" />
+          <Property Name="MATRICULA" Type="float" />
+          <Property Name="CLAVE_CIUDADANA" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_CIVIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" />
+          <Property Name="CALLE" Type="varchar" MaxLength="1000" />
+          <Property Name="NUMINT" Type="varchar" MaxLength="50" />
+          <Property Name="NUMEXT" Type="varchar" MaxLength="50" />
+          <Property Name="COLONIA" Type="varchar" MaxLength="500" />
+          <Property Name="CP" Type="varchar" MaxLength="50" />
+          <Property Name="CIUDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO" Type="nvarchar" MaxLength="255" />
+          <Property Name="PAIS" Type="int" />
+          <Property Name="TELEFONO" Type="varchar" MaxLength="50" />
+          <Property Name="CELULAR" Type="varchar" MaxLength="50" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="LUGAR_NACIMIENTO" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_NACIMIENTO" Type="nvarchar" MaxLength="255" />
+          <Property Name="NACIONALIDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESCUELA_PROCEDENCIA" Type="nvarchar" MaxLength="255" />
+          <Property Name="ESTADO_ESCOLARIDAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="FECHA_INGRESO" Type="datetime" />
+          <Property Name="GENERO" Type="varchar" MaxLength="50" />
+          <Property Name="PLANTEL" Type="int" />
+          <Property Name="CODIGOGRUPO" Type="varchar" MaxLength="50" />
+          <Property Name="CICLO" Type="varchar" MaxLength="50" />
+          <Property Name="FECHAREVISION" Type="datetime" />
+        </EntityType>
+        <EntityType Name="dataVer2ERR">
+          <Key>
+            <PropertyRef Name="NUMEROALUMNO" />
+          </Key>
+          <Property Name="NUMEROALUMNO" Type="float" Nullable="false" />
+          <Property Name="PATERNO" Type="smallint" />
+          <Property Name="MATERNO" Type="smallint" />
+          <Property Name="NOMBRE" Type="smallint" />
+          <Property Name="NIVEL" Type="smallint" />
+          <Property Name="GRADO" Type="smallint" />
+          <Property Name="CLAVE_CIUDADANA" Type="smallint" />
+          <Property Name="ESTADO_CIVIL" Type="smallint" />
+          <Property Name="FECHA_NACIMIENTO" Type="smallint" />
+          <Property Name="CALLE" Type="smallint" />
+          <Property Name="NUMINT" Type="smallint" />
+          <Property Name="NUMEXT" Type="smallint" />
+          <Property Name="COLONIA" Type="smallint" />
+          <Property Name="CP" Type="smallint" />
+          <Property Name="CIUDAD" Type="smallint" />
+          <Property Name="ESTADO" Type="smallint" />
+          <Property Name="PAIS" Type="smallint" />
+          <Property Name="TELEFONO" Type="smallint" />
+          <Property Name="CELULAR" Type="smallint" />
+          <Property Name="EMAIL" Type="smallint" />
+          <Property Name="LUGAR_NACIMIENTO" Type="smallint" />
+          <Property Name="ESTADO_NACIMIENTO" Type="smallint" />
+          <Property Name="NACIONALIDAD" Type="smallint" />
+          <Property Name="ESCUELA_PROCEDENCIA" Type="smallint" />
+          <Property Name="ESTADO_ESCOLARIDAD" Type="smallint" />
+          <Property Name="FECHA_INGRESO" Type="smallint" />
+          <Property Name="GENERO" Type="smallint" />
+          <Property Name="PLANTEL" Type="smallint" />
+          <Property Name="CODIGOGRUPO" Type="smallint" />
+          <Property Name="CICLO" Type="smallint" />
+          <Property Name="TIMESTAMP" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'unimoVerInfo.dbo.estado' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="id_estado" />
+            
+            
+            
+          </Key>
+          <Property Name="id_estado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_pais" Type="int" Nullable="false" />
+          <Property Name="estado" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="edoGES" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'unimoVerInfo.dbo.pais' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="id_pais" />
+            
+            
+          </Key>
+          <Property Name="id_pais" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pais" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="haya" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="plantel">
+          <Key>
+            <PropertyRef Name="id_plantel" />
+          </Key>
+          <Property Name="id_plantel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdGES" Type="int" Nullable="false" />
+          <Property Name="nombre_plantel" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="id_director" Type="int" />
+          <Property Name="id_departamento" Type="int" />
+          <Property Name="activo" Type="smallint" />
+          <Property Name="calle" Type="varchar" MaxLength="255" />
+          <Property Name="colonia" Type="varchar" MaxLength="255" />
+          <Property Name="ciudad" Type="varchar" MaxLength="255" />
+          <Property Name="estado" Type="varchar" MaxLength="255" />
+          <Property Name="cp" Type="varchar" MaxLength="255" />
+          <Property Name="pais" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="unimoVerInfoModelStoreContainer">
+          <EntitySet Name="alumnosFromGES" EntityType="Self.alumnosFromGES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BitacoraVI" EntityType="Self.BitacoraVI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dataVer1" EntityType="Self.dataVer1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dataVer2" EntityType="Self.dataVer2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dataVer2ERR" EntityType="Self.dataVer2ERR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="plantel" EntityType="Self.plantel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estado" EntityType="Self.estado" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [estado].[id_estado] AS [id_estado], 
+    [estado].[id_pais] AS [id_pais], 
+    [estado].[estado] AS [estado], 
+    [estado].[edoGES] AS [edoGES]
+    FROM [dbo].[estado] AS [estado]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="pais" EntityType="Self.pais" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [pais].[id_pais] AS [id_pais], 
+    [pais].[pais] AS [pais], 
+    [pais].[haya] AS [haya]
+    FROM [dbo].[pais] AS [pais]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="unimoVerInfoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="alumnosFromGE">
+          <Key>
+            <PropertyRef Name="NUMEROALUMNO" />
+          </Key>
+          <Property Name="NUMEROALUMNO" Type="Double" Nullable="false" />
+          <Property Name="PATERNO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MATERNO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NIVEL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GRADO" Type="Double" />
+          <Property Name="MATRICULA" Type="Double" />
+          <Property Name="CLAVE_CIUDADANA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="3" />
+          <Property Name="DOMICILIO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CP" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CIUDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CELULAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO_CIVIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LUGAR_NACIMIENTO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO_NACIMIENTO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NACIONALIDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESCUELA_PROCEDENCIA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO_ESCOLARIDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_INGRESO" Type="DateTime" Precision="3" />
+          <Property Name="GENERO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PLANTEL" Type="Int32" />
+          <Property Name="CODIGOGRUPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="dataVer1">
+          <Key>
+            <PropertyRef Name="NUMEROALUMNO" />
+          </Key>
+          <Property Name="NUMEROALUMNO" Type="Double" Nullable="false" />
+          <Property Name="PATERNO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MATERNO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NIVEL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GRADO" Type="Double" />
+          <Property Name="MATRICULA" Type="Double" />
+          <Property Name="CLAVE_CIUDADANA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="3" />
+          <Property Name="CP" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CIUDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CELULAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO_CIVIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LUGAR_NACIMIENTO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO_NACIMIENTO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NACIONALIDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESCUELA_PROCEDENCIA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO_ESCOLARIDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_INGRESO" Type="DateTime" Precision="3" />
+          <Property Name="GENERO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PLANTEL" Type="Int32" />
+          <Property Name="CALLE" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="NUMINT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NUMEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COLONIA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="PAIS" Type="Int32" />
+          <Property Name="CODIGOGRUPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CICLO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHAREVISION" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="unimoVerInfoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="alumnosFromGES" EntityType="Self.alumnosFromGE" />
+          <EntitySet Name="dataVer1" EntityType="Self.dataVer1" />
+          <EntitySet Name="dataVer2" EntityType="unimoVerInfoModel.dataVer2" />
+          <EntitySet Name="estadoes" EntityType="unimoVerInfoModel.estado" />
+          <EntitySet Name="pais" EntityType="unimoVerInfoModel.pai" />
+          <AssociationSet Name="FK_estado_pais" Association="unimoVerInfoModel.FK_estado_pais">
+            <End Role="pai" EntitySet="pais" />
+            <End Role="estado" EntitySet="estadoes" />
+          </AssociationSet>
+          <EntitySet Name="dataVer2ERR" EntityType="unimoVerInfoModel.dataVer2ERR" />
+          <EntitySet Name="plantels" EntityType="unimoVerInfoModel.plantel" />
+          <EntitySet Name="BitacoraVIs" EntityType="unimoVerInfoModel.BitacoraVI" />
+        </EntityContainer>
+        <EntityType Name="dataVer2">
+          <Key>
+            <PropertyRef Name="NUMEROALUMNO" />
+          </Key>
+          <Property Name="NUMEROALUMNO" Type="Double" Nullable="false" />
+          <Property Name="PATERNO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MATERNO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NIVEL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GRADO" Type="Double" />
+          <Property Name="MATRICULA" Type="Double" />
+          <Property Name="CLAVE_CIUDADANA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="3" />
+          <Property Name="CP" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CIUDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CELULAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO_CIVIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LUGAR_NACIMIENTO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO_NACIMIENTO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NACIONALIDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESCUELA_PROCEDENCIA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO_ESCOLARIDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_INGRESO" Type="DateTime" Precision="3" />
+          <Property Name="GENERO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PLANTEL" Type="Int32" />
+          <Property Name="CALLE" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="NUMINT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NUMEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COLONIA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="PAIS" Type="Int32" />
+          <Property Name="CODIGOGRUPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CICLO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHAREVISION" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="id_estado" />
+          </Key>
+          <Property Name="id_estado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_pais" Type="Int32" Nullable="false" />
+          <Property Name="estado1" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="edoGES" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="pai" Relationship="unimoVerInfoModel.FK_estado_pais" FromRole="estado" ToRole="pai" />
+        </EntityType>
+        <EntityType Name="pai">
+          <Key>
+            <PropertyRef Name="id_pais" />
+          </Key>
+          <Property Name="id_pais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pais" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="haya" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="estadoes" Relationship="unimoVerInfoModel.FK_estado_pais" FromRole="pai" ToRole="estado" />
+        </EntityType>
+        <Association Name="FK_estado_pais">
+          <End Type="unimoVerInfoModel.pai" Role="pai" Multiplicity="1" />
+          <End Type="unimoVerInfoModel.estado" Role="estado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pai">
+              <PropertyRef Name="id_pais" />
+            </Principal>
+            <Dependent Role="estado">
+              <PropertyRef Name="id_pais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="dataVer2ERR">
+          <Key>
+            <PropertyRef Name="NUMEROALUMNO" />
+          </Key>
+          <Property Name="NUMEROALUMNO" Type="Double" Nullable="false" />
+          <Property Name="PATERNO" Type="Int16" />
+          <Property Name="MATERNO" Type="Int16" />
+          <Property Name="NOMBRE" Type="Int16" />
+          <Property Name="NIVEL" Type="Int16" />
+          <Property Name="GRADO" Type="Int16" />
+          <Property Name="CLAVE_CIUDADANA" Type="Int16" />
+          <Property Name="ESTADO_CIVIL" Type="Int16" />
+          <Property Name="FECHA_NACIMIENTO" Type="Int16" />
+          <Property Name="CP" Type="Int16" />
+          <Property Name="CIUDAD" Type="Int16" />
+          <Property Name="ESTADO" Type="Int16" />
+          <Property Name="TELEFONO" Type="Int16" />
+          <Property Name="CELULAR" Type="Int16" />
+          <Property Name="EMAIL" Type="Int16" />
+          <Property Name="LUGAR_NACIMIENTO" Type="Int16" />
+          <Property Name="ESTADO_NACIMIENTO" Type="Int16" />
+          <Property Name="NACIONALIDAD" Type="Int16" />
+          <Property Name="ESCUELA_PROCEDENCIA" Type="Int16" />
+          <Property Name="ESTADO_ESCOLARIDAD" Type="Int16" />
+          <Property Name="FECHA_INGRESO" Type="Int16" />
+          <Property Name="GENERO" Type="Int16" />
+          <Property Name="PLANTEL" Type="Int16" />
+          <Property Name="CALLE" Type="Int16" />
+          <Property Name="NUMINT" Type="Int16" />
+          <Property Name="NUMEXT" Type="Int16" />
+          <Property Name="COLONIA" Type="Int16" />
+          <Property Name="PAIS" Type="Int16" />
+          <Property Name="CODIGOGRUPO" Type="Int16" />
+          <Property Name="TIMESTAMP" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CICLO" Type="Int16" />
+        </EntityType>
+        <EntityType Name="plantel">
+          <Key>
+            <PropertyRef Name="id_plantel" />
+          </Key>
+          <Property Name="id_plantel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdGES" Type="Int32" Nullable="false" />
+          <Property Name="nombre_plantel" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="id_director" Type="Int32" />
+          <Property Name="id_departamento" Type="Int32" />
+          <Property Name="activo" Type="Int16" />
+          <Property Name="calle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="colonia" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ciudad" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="cp" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="pais" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BitacoraVI">
+          <Key>
+            <PropertyRef Name="IdBitacora" />
+          </Key>
+          <Property Name="IdBitacora" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MATRICULA" Type="Double" />
+          <Property Name="NUMEROALUMNO" Type="Double" />
+          <Property Name="MOVIMIENTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="unimoVerInfoModelStoreContainer" CdmEntityContainer="unimoVerInfoEntities">
+          <EntitySetMapping Name="alumnosFromGES">
+            <EntityTypeMapping TypeName="unimoVerInfoModel.alumnosFromGE">
+              <MappingFragment StoreEntitySet="alumnosFromGES">
+                <ScalarProperty Name="CODIGOGRUPO" ColumnName="CODIGOGRUPO" />
+                <ScalarProperty Name="PLANTEL" ColumnName="PLANTEL" />
+                <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+                <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+                <ScalarProperty Name="ESTADO_ESCOLARIDAD" ColumnName="ESTADO_ESCOLARIDAD" />
+                <ScalarProperty Name="ESCUELA_PROCEDENCIA" ColumnName="ESCUELA_PROCEDENCIA" />
+                <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+                <ScalarProperty Name="ESTADO_NACIMIENTO" ColumnName="ESTADO_NACIMIENTO" />
+                <ScalarProperty Name="LUGAR_NACIMIENTO" ColumnName="LUGAR_NACIMIENTO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="ESTADO_CIVIL" ColumnName="ESTADO_CIVIL" />
+                <ScalarProperty Name="NUMEROALUMNO" ColumnName="NUMEROALUMNO" />
+                <ScalarProperty Name="PATERNO" ColumnName="PATERNO" />
+                <ScalarProperty Name="MATERNO" ColumnName="MATERNO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+                <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+                <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+                <ScalarProperty Name="CLAVE_CIUDADANA" ColumnName="CLAVE_CIUDADANA" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="DOMICILIO" ColumnName="DOMICILIO" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dataVer1">
+            <EntityTypeMapping TypeName="unimoVerInfoModel.dataVer1">
+              <MappingFragment StoreEntitySet="dataVer1">
+                <ScalarProperty Name="FECHAREVISION" ColumnName="FECHAREVISION" />
+                <ScalarProperty Name="CICLO" ColumnName="CICLO" />
+                <ScalarProperty Name="CODIGOGRUPO" ColumnName="CODIGOGRUPO" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+                <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+                <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="PLANTEL" ColumnName="PLANTEL" />
+                <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+                <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+                <ScalarProperty Name="ESTADO_ESCOLARIDAD" ColumnName="ESTADO_ESCOLARIDAD" />
+                <ScalarProperty Name="ESCUELA_PROCEDENCIA" ColumnName="ESCUELA_PROCEDENCIA" />
+                <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+                <ScalarProperty Name="ESTADO_NACIMIENTO" ColumnName="ESTADO_NACIMIENTO" />
+                <ScalarProperty Name="LUGAR_NACIMIENTO" ColumnName="LUGAR_NACIMIENTO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="ESTADO_CIVIL" ColumnName="ESTADO_CIVIL" />
+                <ScalarProperty Name="NUMEROALUMNO" ColumnName="NUMEROALUMNO" />
+                <ScalarProperty Name="PATERNO" ColumnName="PATERNO" />
+                <ScalarProperty Name="MATERNO" ColumnName="MATERNO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+                <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+                <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+                <ScalarProperty Name="CLAVE_CIUDADANA" ColumnName="CLAVE_CIUDADANA" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dataVer2">
+            <EntityTypeMapping TypeName="unimoVerInfoModel.dataVer2">
+              <MappingFragment StoreEntitySet="dataVer2">
+                <ScalarProperty Name="FECHAREVISION" ColumnName="FECHAREVISION" />
+                <ScalarProperty Name="CICLO" ColumnName="CICLO" />
+                <ScalarProperty Name="CODIGOGRUPO" ColumnName="CODIGOGRUPO" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+                <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+                <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="PLANTEL" ColumnName="PLANTEL" />
+                <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+                <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+                <ScalarProperty Name="ESTADO_ESCOLARIDAD" ColumnName="ESTADO_ESCOLARIDAD" />
+                <ScalarProperty Name="ESCUELA_PROCEDENCIA" ColumnName="ESCUELA_PROCEDENCIA" />
+                <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+                <ScalarProperty Name="ESTADO_NACIMIENTO" ColumnName="ESTADO_NACIMIENTO" />
+                <ScalarProperty Name="LUGAR_NACIMIENTO" ColumnName="LUGAR_NACIMIENTO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="ESTADO_CIVIL" ColumnName="ESTADO_CIVIL" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="CLAVE_CIUDADANA" ColumnName="CLAVE_CIUDADANA" />
+                <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+                <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+                <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="MATERNO" ColumnName="MATERNO" />
+                <ScalarProperty Name="PATERNO" ColumnName="PATERNO" />
+                <ScalarProperty Name="NUMEROALUMNO" ColumnName="NUMEROALUMNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estadoes">
+            <EntityTypeMapping TypeName="unimoVerInfoModel.estado">
+              <MappingFragment StoreEntitySet="estado">
+                <ScalarProperty Name="edoGES" ColumnName="edoGES" />
+                <ScalarProperty Name="estado1" ColumnName="estado" />
+                <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+                <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pais">
+            <EntityTypeMapping TypeName="unimoVerInfoModel.pai">
+              <MappingFragment StoreEntitySet="pais">
+                <ScalarProperty Name="haya" ColumnName="haya" />
+                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dataVer2ERR">
+            <EntityTypeMapping TypeName="unimoVerInfoModel.dataVer2ERR">
+              <MappingFragment StoreEntitySet="dataVer2ERR">
+                <ScalarProperty Name="CICLO" ColumnName="CICLO" />
+                <ScalarProperty Name="TIMESTAMP" ColumnName="TIMESTAMP" />
+                <ScalarProperty Name="CODIGOGRUPO" ColumnName="CODIGOGRUPO" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+                <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+                <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="PLANTEL" ColumnName="PLANTEL" />
+                <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+                <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+                <ScalarProperty Name="ESTADO_ESCOLARIDAD" ColumnName="ESTADO_ESCOLARIDAD" />
+                <ScalarProperty Name="ESCUELA_PROCEDENCIA" ColumnName="ESCUELA_PROCEDENCIA" />
+                <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+                <ScalarProperty Name="ESTADO_NACIMIENTO" ColumnName="ESTADO_NACIMIENTO" />
+                <ScalarProperty Name="LUGAR_NACIMIENTO" ColumnName="LUGAR_NACIMIENTO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="ESTADO_CIVIL" ColumnName="ESTADO_CIVIL" />
+                <ScalarProperty Name="CLAVE_CIUDADANA" ColumnName="CLAVE_CIUDADANA" />
+                <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+                <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="MATERNO" ColumnName="MATERNO" />
+                <ScalarProperty Name="PATERNO" ColumnName="PATERNO" />
+                <ScalarProperty Name="NUMEROALUMNO" ColumnName="NUMEROALUMNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="plantels">
+            <EntityTypeMapping TypeName="unimoVerInfoModel.plantel">
+              <MappingFragment StoreEntitySet="plantel">
+                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="cp" ColumnName="cp" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+                <ScalarProperty Name="colonia" ColumnName="colonia" />
+                <ScalarProperty Name="calle" ColumnName="calle" />
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+                <ScalarProperty Name="id_director" ColumnName="id_director" />
+                <ScalarProperty Name="nombre_plantel" ColumnName="nombre_plantel" />
+                <ScalarProperty Name="IdGES" ColumnName="IdGES" />
+                <ScalarProperty Name="id_plantel" ColumnName="id_plantel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BitacoraVIs">
+            <EntityTypeMapping TypeName="unimoVerInfoModel.BitacoraVI">
+              <MappingFragment StoreEntitySet="BitacoraVI">
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="MOVIMIENTO" ColumnName="MOVIMIENTO" />
+                <ScalarProperty Name="NUMEROALUMNO" ColumnName="NUMEROALUMNO" />
+                <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+                <ScalarProperty Name="IdBitacora" ColumnName="IdBitacora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

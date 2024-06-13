@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3672c14c510942479b401b74f0ac823d" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="unimoVerInfoModel.alumnosFromGE" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unimoVerInfoModel.dataVer1" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unimoVerInfoModel.dataVer2" Width="1.5" PointX="4.625" PointY="0.75" />
+        <EntityTypeShape EntityType="unimoVerInfoModel.estado" Width="1.5" PointX="2.75" PointY="7.25" />
+        <EntityTypeShape EntityType="unimoVerInfoModel.pai" Width="1.5" PointX="0.5" PointY="7.375" />
+        <AssociationConnector Association="unimoVerInfoModel.FK_estado_pais" />
+        <EntityTypeShape EntityType="unimoVerInfoModel.dataVer2ERR" Width="1.5" PointX="6.75" PointY="1" />
+        <EntityTypeShape EntityType="unimoVerInfoModel.plantel" Width="1.5" PointX="4.75" PointY="7.875" />
+        <EntityTypeShape EntityType="unimoVerInfoModel.BitacoraVI" Width="1.5" PointX="6.5" PointY="7.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
